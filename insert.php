@@ -1,15 +1,10 @@
 <?php
-$connection = new mysqli('localhost', 'root', null, 'question');
-if (!$connection) {
-    echo "فشل الاتصال";
-} else {
-    echo "تم الاتصال بقاعدة البيانات";
-}
+include 'config.php';
 
 
 
 if (isset($_POST['add'])) {
-    $title = $_POST['question'];
+    $title = $_POST['qst_name'];
     $sql = "INSERT INTO `questions` (`nom`, `contenu`, `date`) VALUES ('$title', NULL, current_timestamp())";
     if ($connection->query($sql)) {
         echo "<br>";
