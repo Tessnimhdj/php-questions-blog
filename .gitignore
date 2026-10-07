@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+
+/vendor/
+/node_modules/
+
+*.log
+/logs/
+
+*dump*.sql
+*.sql.bak
+*.sql.gz
+
+Thumbs.db
+Desktop.ini
+.DS_Store
